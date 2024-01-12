@@ -13,6 +13,12 @@ public class Login extends DriverSetup {
         browser.findElement(By.name("email")).sendKeys("mohammad.sumon.aiub@gmail.com");
         Thread.sleep(500);
 
+        browser.findElement(By.name("pass")).sendKeys("12345678");
+        Thread.sleep(500);
+
+        browser.findElement(By.name("login")).click();
+        Thread.sleep(700);
+
     }
 
 }
