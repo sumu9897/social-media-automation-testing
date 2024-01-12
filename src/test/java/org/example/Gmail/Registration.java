@@ -1,13 +1,18 @@
 package org.example.Gmail;
 
 import org.example.DriverSetup;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class Registration extends DriverSetup {
     @Test
     public void UserRegistration() throws InterruptedException {
-        browser.get("https://accounts.google.com/lifecycle/steps/signup/name?continue=https://mail.google.com/mail&dsh=S1091219493:1704288034677655&ec=GAlAFw&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&service=mail&theme=glif&TL=AHNYTIQ_rTAADpPgDRywR6mOXbhgJ95jEqHjd6VWNOAcojssvEqZeDN09qlxoLHz");
+        browser.get("https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1091219493%3A1704288034677655&theme=glif");
         Thread.sleep(2000);
+
+        browser.findElement(By.xpath("//span[normalize-space()='Create account']")).click();
+
+        browser.findElement(By.xpath("(//span[normalize-space()='For my personal use'])[1]")).click();
     }
 
 }
