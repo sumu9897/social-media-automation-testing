@@ -13,6 +13,18 @@ public class Registration extends DriverSetup {
         browser.findElement(By.xpath("//span[normalize-space()='Create account']")).click();
 
         browser.findElement(By.xpath("(//span[normalize-space()='For my personal use'])[1]")).click();
+
+
+        browser.findElement(By.name("firstName")).sendKeys("Mohammad");
+        Thread.sleep(500);
+
+        browser.findElement(By.name("lastName")).sendKeys("Sumon");
+        Thread.sleep(500);
+
+        browser.findElement(By.xpath("(//span[@class='VfPpkd-vQzf8d'])[1]")).click();
+
+
+
     }
 
 }
